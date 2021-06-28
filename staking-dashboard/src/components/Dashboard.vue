@@ -13,7 +13,7 @@
             height="30"
             width="30"
           />
-          <h2>Your dashboard</h2>
+          <h2>Your dashboard {{ logged }}</h2>
           </div>
           
         </v-col>
@@ -26,7 +26,9 @@
             src="../assets/Icon feather-sun.svg"
             height="30"
             width="30"
-          /> /
+            @click="alert"
+          /> 
+          <strong>/</strong>
           <img
             alt="Theme button"
             src="../assets/Icon feather-moon.svg"
@@ -76,6 +78,10 @@ import LoginPopup from './LoginPopup';
 
 export default{
   components: {LoginPopup},
+  data(){
+    return{}
+  },
+  
 }
 
 </script>
