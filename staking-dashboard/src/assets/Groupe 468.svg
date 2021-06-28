@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="42" viewBox="0 0 41 42">
+  <g id="Groupe_468" data-name="Groupe 468" transform="translate(-792 -36)">
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(792 36)" fill="none" stroke="#2e86ff" stroke-width="2">
+      <rect width="41" height="42" rx="20.5" stroke="none"/>
+      <rect x="1" y="1" width="39" height="40" rx="19.5" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M12.832,10.781,16.3,7.311a.656.656,0,0,0-.929-.926l-3.934,3.932a.655.655,0,0,0-.019.9l3.951,3.959a.656.656,0,1,0,.929-.926Z" transform="translate(798.267 46.218)" fill="#141d40"/>
+  </g>
+</svg>
