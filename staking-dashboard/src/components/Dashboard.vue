@@ -18,7 +18,7 @@
           
         </v-col>
      
-        <v-col md="6" class="top-alignement">
+        <v-col md="6" class="top-alignement ">
 
           <div class="top-alignement">
           <img
@@ -26,7 +26,7 @@
             src="../assets/Icon feather-sun.svg"
             height="30"
             width="30"
-            @click="alert"
+           
           /> 
           <strong>/</strong>
           <img

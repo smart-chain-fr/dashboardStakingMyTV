@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row class="flex_row">
 
        <v-dialog v-model="dialog" max-width="290">
       <template v-slot:activator="{ on, attrs }">
@@ -70,7 +70,7 @@
             </v-row>
 
             <v-row>
-              <div>
+              <div> 
                 <v-btn class="connect_wallet">
                   <img
                     alt="Theme button"
@@ -104,7 +104,7 @@ export default {
   data() {
     return {
       dialog: false,
-      logged: false,
+      logged: false
     };
   },
 };
@@ -112,6 +112,8 @@ export default {
 
 <style scoped>
 .connect_wallet {
+  display: flex;
+  justify-content: flex-end;
   border: 2px solid #2e86ff;
   border-radius: 15px;
   color: white !important;
@@ -148,5 +150,10 @@ export default {
 
 img {
   margin-right: 5px;
+}
+
+.flex_row{
+    display: flex;
+    justify-content: flex-end;
 }
 </style>
