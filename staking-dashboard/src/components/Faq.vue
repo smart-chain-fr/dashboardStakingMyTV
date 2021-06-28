@@ -1,5 +1,5 @@
 <template>
-  <v-col md="12" class="container-faq">
+  <v-col md="8" class="container-faq ml-3 mr-3">
     <v-row class="logo">
       <br>
       <v-img
@@ -22,7 +22,7 @@
 
       <v-row class="arrow-logo">
         <v-img
-          src="../assets/Groupe 376.svg"
+          src="../assets/arrow.svg"
           max-width="30"
           max-height="30"
         ></v-img>
@@ -39,7 +39,7 @@
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
-  margin: 12px;
+  /* margin: 12px; */
 }
 
 .title-faq {

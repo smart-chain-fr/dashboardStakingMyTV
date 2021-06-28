@@ -1,11 +1,12 @@
-<template>
+<template >
   <v-col md="8" class="container-dashboard">
+    
     <!-- Top of element : Your dashboard + Connection button -->
     <v-row class="header-staked justify-space-between">
       <v-row>
         <v-col md="6" class="top-alignement">
 
-          <div>
+          <div class="top-alignement">
             <img
             alt="Your dashboard"
             src="../assets/Icon material-dashboard.svg"
@@ -19,7 +20,7 @@
      
         <v-col md="6" class="top-alignement">
 
-          <div>
+          <div class="top-alignement">
           <img
             alt="Theme button"
             src="../assets/Icon feather-sun.svg"
@@ -33,7 +34,7 @@
             width="30"
           />
           </div>
-          <v-btn> Connect wallet</v-btn>
+          <LoginPopup />
         </v-col>
       </v-row>
     </v-row>
@@ -69,6 +70,15 @@
   </v-col>
 </template>
 
+<script>
+
+import LoginPopup from './LoginPopup';
+
+export default{
+  components: {LoginPopup},
+}
+
+</script>
 
 
 <style scoped>
@@ -103,13 +113,6 @@ span {
   flex-direction: column;
 }
 
-.v-btn {
-  border: 2px solid #2e86ff;
-  border-radius: 50px;
-  color: white !important;
-  background-color: #253261 !important;
-}
-
 .header-staked {
   padding: 20px;
 }
@@ -117,5 +120,9 @@ span {
 .top-alignement{
   display: flex;
   justify-content: space-between;
+}
+
+img{
+  margin-right: 10px;
 }
 </style>

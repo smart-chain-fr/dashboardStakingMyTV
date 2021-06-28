@@ -6,12 +6,13 @@
 
     <v-col md="12">
       <v-btn class="mystake mb-5" block>My Stake</v-btn>
-
       <v-btn class="stake" block> Stake</v-btn>
     </v-col>
   </v-col>
 </template>
+
 <style scoped>
+
 .button-row {
   display: block;
   flex-direction: column;
@@ -58,6 +59,7 @@
   color: #badeff !important;
   opacity: 1;
   text-align: center;
+  border-bottom: solid 0,5px #badeff;
 }
 
 .container-action {

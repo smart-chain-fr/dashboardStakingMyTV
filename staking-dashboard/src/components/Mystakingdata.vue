@@ -1,47 +1,98 @@
 <template>
-  <v-col md="8" class="container-staking">
-    <v-col>
-      <!-- Top of element : Your dashboard + Connection button -->
-      <v-row class="justify-space-between header-staked">
-        <v-row>
-          <img
-            alt="Your dashboard"
-            src="../assets/Groupe 469.svg"
-            height="30"
-            width="30"
-          />
-          <h2>My staking data</h2>
-        </v-row>
-      </v-row>
-      <!-- End of element : Your dashboard + Connection button -->
+  <v-row class="ml-1 mt-2 mr-1">
+    <!-- margins -->
 
-      <!-- Stats -->
-      <v-row>
+    <v-col md="8" class="container-staking">
+      <!-- 100% of the block-->
+      <div>
         <v-col md="6">
-          <div class="container-staked">
-            <span>-.,..$</span>
-            <span>MYTV RATE</span>
-          </div>
+          <!-- No impact because it's too little -->
+          <!-- Icon + title -->
+          <v-row class="justify-space-between header-staked">
+            <v-row>
+              <img
+                alt="Your dashboard"
+                src="../assets/triangle.svg"
+                height="30"
+                width="30"
+              />
+              <h2>My staking data</h2>
+            </v-row>
+          </v-row>
         </v-col>
-      </v-row>
-    </v-col>
-    <v-col md="6">
-      <div class="container-staked">
-        <span>-.,..$</span>
-        <span>TVL</span>
+        <!-- Icon + title  -->
+
+        <v-col md="6">
+          <!-- 100% of the half of the div -->
+          <!-- Block stats 1 -->
+
+          <v-row>
+            <v-col md="12">
+              <div class="container-staked">
+                <v-row class="justify-space-between">
+                  <v-col md="6" class="price-side">
+                    <span>-.,..$</span>
+                  </v-col>
+
+                  <v-col md="6" class="name-side">
+                    <span>MYTV RATE</span>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-col>
+          </v-row>
+
+          <!-- Block stats 1 -->
+
+          <!-- Icon + title  -->
+
+          <!-- Block stats 2 -->
+
+          <v-row>
+            <v-col md="12">
+              <div class="container-staked">
+                <v-row class="justify-space-between">
+                  <v-col md="6" class="price-side">
+                    <span>-.,..$</span>
+                  </v-col>
+
+                  <v-col md="6" class="name-side">
+                    <span>TVL</span>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-col>
+          </v-row>
+
+          <!-- Block stats 2 -->
+
+          <!-- Icon + title  -->
+
+          <!-- Block stats 3 -->
+
+          <v-row>
+            <v-col md="12">
+              <div class="container-staked">
+                <v-row class="justify-space-between">
+                  <v-col md="6" class="price-side">
+                    <span>12</span>
+                  </v-col>
+
+                  <v-col md="6" class="name-side">
+                    <span>Supply Staked</span>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-col>
+          </v-row>
+
+          <!-- Block stats 3 -->
+        </v-col>
       </div>
     </v-col>
-
-    <v-col md="6">
-      <div class="container-staked justify-space-around">
-        <span>-.,..$</span>
-        
-        <span>% supply staked</span>
-      </div>
-    </v-col>
-
+    <v-col md="12"> REEEEEEEEEEEEEEEEEEEEEEEEEEE </v-col>
     <!-- End of Stats -->
-  </v-col>
+  </v-row>
 </template>
 
 
@@ -51,6 +102,22 @@ h2 {
   color: white;
 }
 
+.price-side {
+  text-align: center;
+  font: normal normal bold 16px/23px Circe;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  border-right: 1px solid;
+}
+
+.name-side {
+  text-align: center;
+  font: normal normal 300 18px/26px Circe;
+  letter-spacing: 0px;
+  color: #badeff;
+  opacity: 1;
+}
 .container-staking {
   background-color: #253261;
   border-radius: 15px;
@@ -85,7 +152,7 @@ span {
 }
 
 .header-staked {
-  padding: 40px;
+  padding: 20px;
 }
 
 hr {

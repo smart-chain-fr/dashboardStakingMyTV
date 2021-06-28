@@ -2,21 +2,18 @@
   <v-app>
     <v-main>
       <v-row>
-      
-          <Dashboard />
-          <Action />
-        
-        
+        <Dashboard />
+        <Action />
+
         <Mystakingdata />
-        
-        <v-row>
-          <v-col md="12">
+
+          <!-- <v-col md="4">
             <v-row>
               <Contact />
               <Faq />
             </v-row>
-          </v-col>
-        </v-row>
+          </v-col> -->
+        
       </v-row>
 
       <!-- <Contact />
@@ -28,8 +25,8 @@
 <script>
 import Dashboard from "./components/Dashboard.vue";
 import Action from "./components/Action.vue";
-import Contact from "./components/Contact.vue";
-import Faq from "./components/Faq.vue";
+// import Contact from "./components/Contact.vue";
+// import Faq from "./components/Faq.vue";
 import Mystakingdata from "./components/Mystakingdata.vue";
 
 export default {
@@ -38,10 +35,9 @@ export default {
   components: {
     Dashboard,
     Action,
-    Contact,
-    Faq,
+    // Contact,
+    // Faq,
     Mystakingdata,
-    // Test,
   },
 
   data: () => ({

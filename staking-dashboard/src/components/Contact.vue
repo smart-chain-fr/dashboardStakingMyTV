@@ -1,24 +1,24 @@
 
 <template>
-  <v-col md="12">
+  <v-col md="8">
     <div class="container-contact">
       <h2 class="title-action">Contact</h2>
       <hr />
       <v-row cols="12">
         <v-col row="md-6">
           <br />
-          <v-row cols="6" class="justify-space-around">
+          <v-row cols="6" class="logo-position">
             <v-img
-              src="../assets/Image 21.svg"
+              src="../assets/telegram.svg"
               max-width="30"
               max-height="30"
             ></v-img>
             <p>Telegram</p>
           </v-row>
 
-          <v-row cols="6" class="justify-space-around">
+          <v-row cols="6" class="logo-position">
             <v-img
-              src="../assets/Image 22.svg"
+              src="../assets/twitter.svg"
               max-width="30"
               max-height="30"
             ></v-img>
@@ -28,16 +28,16 @@
 
         <v-col row="md-6">
           <br />
-          <v-row cols="6" class="justify-space-around">
+          <v-row cols="6" class="logo-position">
             <v-img
-              src="../assets/Image 30.svg"
+              src="../assets/discord.svg"
               max-width="30"
               max-height="30"
             ></v-img>
             <p>Discord</p>
           </v-row>
 
-          <v-row cols="6" class="justify-space-around">
+          <v-row cols="6" class="logo-position">
             <v-img
               src="../assets/Groupe 469.svg"
               max-width="30"
@@ -83,12 +83,21 @@ p {
   opacity: 1;
   text-align: center;
 }
-.v-row{
+
+/* .v-row{
   margin-right: 20px;
-  margin-top: 20;
-}
+  margin-top: 20px;
+} */
 
 hr{
   color: #BADEFF;
+}
+
+.logo-position{
+  justify-content: center;
+}
+
+p{
+  margin-left: 10px;
 }
 </style>
