@@ -39,7 +39,7 @@
 
           <v-row cols="6" class="logo-position">
             <v-img
-              src="../assets/Groupe 469.svg"
+              src="../assets/Icon material-dashboard.svg"
               max-width="30"
               max-height="30"
             ></v-img>

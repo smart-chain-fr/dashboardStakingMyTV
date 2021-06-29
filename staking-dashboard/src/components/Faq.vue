@@ -31,25 +31,6 @@
   </v-col>
 </template>
 
-<style scoped>
-.container-faq {
-  display: flex;
-  flex-direction: column;
-  background-color: #253261;
-  border-radius: 15px;
-  opacity: 1;
-  padding: 20px !important;
-  /* margin: 12px; */
-}
-
-.title-faq {
-  font: normal normal bold 18px/26px Circe;
-  letter-spacing: 0px;
-  color: #badeff !important;
-  opacity: 1;
-  text-align: center;
-}
-</style>
 
 <style scoped>
 .logo {
@@ -71,5 +52,23 @@
 
 hr{
   color: #BADEFF;
+}
+
+.container-faq {
+  display: flex;
+  flex-direction: column;
+  background-color: #253261;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 20px !important;
+  /* margin: 12px; */
+}
+
+.title-faq {
+  font: normal normal bold 18px/26px Circe;
+  letter-spacing: 0px;
+  color: #badeff !important;
+  opacity: 1;
+  text-align: center;
 }
 </style>

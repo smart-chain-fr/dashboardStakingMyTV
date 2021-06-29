@@ -7,13 +7,13 @@
 
         <Mystakingdata />
 
-          <!-- <v-col md="4">
-            <v-row>
+        <!-- <router-view></router-view> -->
+         <v-col md="4">
+            
               <Contact />
               <Faq />
-            </v-row>
-          </v-col> -->
-        
+           
+          </v-col> 
       </v-row>
 
       <!-- <Contact />
@@ -25,8 +25,8 @@
 <script>
 import Dashboard from "./components/Dashboard.vue";
 import Action from "./components/Action.vue";
-// import Contact from "./components/Contact.vue";
-// import Faq from "./components/Faq.vue";
+import Contact from "./components/Contact.vue";
+import Faq from "./components/Faq.vue";
 import Mystakingdata from "./components/Mystakingdata.vue";
 
 export default {
@@ -35,14 +35,12 @@ export default {
   components: {
     Dashboard,
     Action,
-    // Contact,
-    // Faq,
+    Contact,
+    Faq,
     Mystakingdata,
   },
 
-  data: () => ({
-    
-  }),
+  data: () => ({}),
 };
 </script>
 

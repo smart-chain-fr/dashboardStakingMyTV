@@ -13,7 +13,7 @@
             height="30"
             width="30"
           />
-          <h2>Your dashboard {{ logged }}</h2>
+          <h2>Your dashboard</h2>
           </div>
           
         </v-col>

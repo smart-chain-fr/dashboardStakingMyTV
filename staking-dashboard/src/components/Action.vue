@@ -5,11 +5,33 @@
     <br />
 
     <v-col md="12">
+
+      <v-btn v-if="logged === false" class="mystake mb-5" block>My Stake</v-btn>
       <v-btn class="mystake mb-5" block>My Stake</v-btn>
+      <!-- <div v-else>
+        <router-link to="/helloworld" class="mystake mb-5" block>My Stake</router-link>
+      </div> -->
+      
       <v-btn class="stake" block> Stake</v-btn>
     </v-col>
   </v-col>
 </template>
+
+<script>
+
+
+export default{
+  
+  data(){
+    return{
+      logged: true
+    }
+  },
+  
+}
+
+</script>
+
 
 <style scoped>
 

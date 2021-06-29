@@ -1,11 +1,13 @@
 <template>
-  <v-row class="ml-1 mt-2 mr-1">
+  <v-row class="ml-1 mt-2 mr-1 container-staking">
     <!-- margins -->
 
-    <v-col md="8" class="container-staking">
+    <v-col md="4">
+      <!-- Left column  -->
       <!-- 100% of the block-->
       <div>
-        <v-col md="6">
+        <v-col md="12">
+          <!-- Width of objects inside column -->
           <!-- No impact because it's too little -->
           <!-- Icon + title -->
           <v-row class="justify-space-between header-staked">
@@ -22,7 +24,7 @@
         </v-col>
         <!-- Icon + title  -->
 
-        <v-col md="6">
+        <v-col md="12">
           <!-- 100% of the half of the div -->
           <!-- Block stats 1 -->
 
@@ -90,7 +92,64 @@
         </v-col>
       </div>
     </v-col>
-    <v-col md="12"> REEEEEEEEEEEEEEEEEEEEEEEEEEE </v-col>
+
+    <v-col md="8" class="container-staked">
+      <!-- Rigth column -->
+      <v-row>
+        <v-col md="12">
+          <p class="contract_info">Contract info</p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col md="4">
+          <p class="info_left">Market Cap</p>
+        </v-col>
+        <v-col md="4">
+          <p class="midline"></p>
+        </v-col>
+        <v-col md="4">
+          <p class="info_right">300,000,000</p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col md="4">
+          <p class="info_left">Total supply</p>
+        </v-col>
+        <v-col md="4">
+          <p class="midline"></p>
+        </v-col>
+        <v-col md="4">
+          <p class="info_right">390,000,000</p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col md="4">
+          <p class="info_left">Address</p>
+        </v-col>
+        <v-col md="4">
+          <p class="midline"></p>
+        </v-col>
+        <v-col md="4">
+          <p class="info_right">An Adress</p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col md="4">
+          <p class="info_left">Holder</p>
+        </v-col>
+        <v-col md="4">
+          <div class="midline"></div>
+        </v-col>
+        <v-col md="4">
+          <p class="info_right">1,789,492</p>
+        </v-col>
+      </v-row>
+    </v-col>
+
     <!-- End of Stats -->
   </v-row>
 </template>
@@ -98,6 +157,33 @@
 
 
 <style scoped>
+.info_left {
+  text-align: center;
+  font: normal normal bold 16px/23px Circe;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.info_right {
+  text-align: center;
+  font: normal normal 300 16px/23px Circe;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+.midline {
+  /* height: 10px; */
+  border: 1px solid white;
+}
+.contract_info {
+  text-align: center;
+  font: normal normal bold 18px/26px Circe;
+  letter-spacing: 0px;
+  color: #badeff;
+  opacity: 1;
+}
+
 h2 {
   color: white;
 }

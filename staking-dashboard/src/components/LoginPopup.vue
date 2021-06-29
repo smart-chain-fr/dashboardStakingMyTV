@@ -1,26 +1,20 @@
 <template>
   <v-row class="flex_row">
-
-       <v-dialog v-model="dialog" max-width="290">
+    <v-dialog v-model="dialog" max-width="290">
       <template v-slot:activator="{ on, attrs }">
-
-                   
-
-        <v-btn v-if="logged === false" v-bind="attrs" v-on="on" class="connect_wallet">
+        <v-btn
+          v-if="logged === false"
+          v-bind="attrs"
+          v-on="on"
+          class="connect_wallet"
+        >
           Connect Wallet
         </v-btn>
-             
-              <div v-else>
-                   <v-btn class="connect_wallet">
-         Logout
-        </v-btn>
-              </div>
-    
+
+        <div v-else>
+          <v-btn class="connect_wallet"> Logout </v-btn>
+        </div>
       </template>
-      
-    
-     
-   
 
       <v-card>
         <!-- <v-card-title class="text-h5">
@@ -70,7 +64,7 @@
             </v-row>
 
             <v-row>
-              <div> 
+              <div>
                 <v-btn class="connect_wallet">
                   <img
                     alt="Theme button"
@@ -104,7 +98,7 @@ export default {
   data() {
     return {
       dialog: false,
-      logged: false
+      logged: false,
     };
   },
 };
@@ -152,8 +146,8 @@ img {
   margin-right: 5px;
 }
 
-.flex_row{
-    display: flex;
-    justify-content: flex-end;
+.flex_row {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
