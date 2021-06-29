@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router'
-import HelloWorld from '../src/layout/HelloWorld.vue'
+import HelloWorld from '../views/HelloWorld.vue'
+import Home from '../views/Home.vue'
 
 Vue.use(Router);
 

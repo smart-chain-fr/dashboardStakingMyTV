@@ -1,7 +1,7 @@
 
 <template>
-  <v-col md="8">
-    <div class="container-contact">
+  <v-col md="12" class="container-contact"> <!-- Prends la place restante sur la row -->
+    
       <h2 class="title-action">Contact</h2>
       <hr />
       <v-row cols="12">
@@ -39,7 +39,7 @@
 
           <v-row cols="6" class="logo-position">
             <v-img
-              src="../assets/Icon material-dashboard.svg"
+              src="../assets/triangle.svg"
               max-width="30"
               max-height="30"
             ></v-img>
@@ -47,9 +47,23 @@
           </v-row>
         </v-col>
       </v-row>
-    </div>
+   
   </v-col>
 </template>
+
+
+<script>
+export default {
+  name: "Mystakingdata",
+
+  components: {
+    
+  },
+
+  data: () => ({}),
+};
+</script>
+
 
 <style scoped>
 #title {
@@ -61,6 +75,7 @@
 }
 
 .container-contact {
+  display: auto;
   background-color: #253261;
   border-radius: 15px;
   opacity: 1;

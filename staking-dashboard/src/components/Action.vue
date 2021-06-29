@@ -1,40 +1,38 @@
 <template>
-  <v-col md="3" class="container-action">
+  <v-col md="12" class="container-action">
     <h2 class="title-action">Action</h2>
-    <hr /> <!--  Border botton possible -->
+    <hr />
+    <!--  Border botton possible -->
     <br />
-
-    <v-col md="12">
-
-      <v-btn v-if="logged === false" class="mystake mb-5" block>My Stake</v-btn>
-      <v-btn class="mystake mb-5" block>My Stake</v-btn>
-      <!-- <div v-else>
+    <v-row>
+      <v-col md="12">
+        <v-btn v-if="logged === false" class="mystake mb-5" block
+          >My Stake</v-btn
+        >
+        <v-btn class="mystake mb-5" block>My Stake</v-btn>
+        <!-- <div v-else>
         <router-link to="/helloworld" class="mystake mb-5" block>My Stake</router-link>
       </div> -->
-      
-      <v-btn class="stake" block> Stake</v-btn>
-    </v-col>
+
+        <v-btn class="stake" block> Stake</v-btn>
+      </v-col>
+    </v-row>
   </v-col>
 </template>
 
 <script>
-
-
-export default{
-  
-  data(){
-    return{
-      logged: true
-    }
+export default {
+  name:"Action",
+  data() {
+    return {
+      logged: true,
+    };
   },
-  
-}
-
+};
 </script>
 
 
 <style scoped>
-
 .button-row {
   display: block;
   flex-direction: column;
@@ -81,7 +79,7 @@ export default{
   color: #badeff !important;
   opacity: 1;
   text-align: center;
-  border-bottom: solid 0,5px #badeff;
+  border-bottom: solid 0, 5px #badeff;
 }
 
 .container-action {
@@ -90,4 +88,5 @@ export default{
   opacity: 1;
   padding: 20px !important;
 }
+
 </style>

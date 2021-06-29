@@ -1,5 +1,5 @@
 <template>
-  <v-col md="8" class="container-faq ml-3 mr-3">
+  <v-col md="12" class="container-faq">
     <v-row class="logo">
       <br>
       <v-img
@@ -31,6 +31,19 @@
   </v-col>
 </template>
 
+
+<script>
+export default {
+  name: "Faq",
+
+  components: {
+    
+  },
+
+  data: () => ({}),
+};
+
+</script>
 
 <style scoped>
 .logo {
@@ -65,6 +78,7 @@ hr{
 }
 
 .title-faq {
+  /* display: table; */
   font: normal normal bold 18px/26px Circe;
   letter-spacing: 0px;
   color: #badeff !important;

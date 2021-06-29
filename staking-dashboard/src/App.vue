@@ -2,42 +2,26 @@
   <v-app>
     <v-main>
       <v-row>
-        <Dashboard />
-        <Action />
-
-        <Mystakingdata />
-
-        <!-- <router-view></router-view> -->
-         <v-col md="4">
-            
-              <Contact />
-              <Faq />
-           
-          </v-col> 
+        <v-col md="12">
+          <Home />
+        </v-col>
+        
       </v-row>
 
-      <!-- <Contact />
-      <Test /> -->
+
     </v-main>
   </v-app>
 </template>
 `
 <script>
-import Dashboard from "./components/Dashboard.vue";
-import Action from "./components/Action.vue";
-import Contact from "./components/Contact.vue";
-import Faq from "./components/Faq.vue";
-import Mystakingdata from "./components/Mystakingdata.vue";
+
+import Home from "./views/Home.vue";
 
 export default {
   name: "App",
 
   components: {
-    Dashboard,
-    Action,
-    Contact,
-    Faq,
-    Mystakingdata,
+    Home
   },
 
   data: () => ({}),

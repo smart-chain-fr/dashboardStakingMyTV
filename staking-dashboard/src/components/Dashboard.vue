@@ -1,5 +1,5 @@
 <template >
-  <v-col md="8" class="container-dashboard">
+  <v-col md="12" class="container-dashboard">
     
     <!-- Top of element : Your dashboard + Connection button -->
     <v-row class="header-staked justify-space-between">
@@ -77,6 +77,7 @@
 import LoginPopup from './LoginPopup';
 
 export default{
+  name: "Dashboard",
   components: {LoginPopup},
   data(){
     return{}

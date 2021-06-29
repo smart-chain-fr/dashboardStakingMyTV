@@ -24,7 +24,7 @@
         </v-col>
         <!-- Icon + title  -->
 
-        <v-col md="12">
+        <v-col md="12" class="">
           <!-- 100% of the half of the div -->
           <!-- Block stats 1 -->
 
@@ -137,7 +137,7 @@
         </v-col>
       </v-row>
 
-      <v-row>
+      <v-row class="">
         <v-col md="4">
           <p class="info_left">Holder</p>
         </v-col>
@@ -154,6 +154,17 @@
   </v-row>
 </template>
 
+<script>
+export default {
+  name: "Mystakingdata",
+
+  components: {
+    
+  },
+
+  data: () => ({}),
+};
+</script>
 
 
 <style scoped>
