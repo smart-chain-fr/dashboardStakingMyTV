@@ -24,7 +24,12 @@
           <v-row class="title_card_alignment">
             <h3 class="title_connect">Connect to a wallet</h3>
             <v-card-actions>
-              <v-btn class="close_dialog_btn " icon x-small @click="dialog = false">
+              <v-btn
+                class="close_dialog_btn"
+                icon
+                x-small
+                @click="dialog = false"
+              >
                 x
               </v-btn>
             </v-card-actions>
@@ -35,7 +40,7 @@
               <br />
               <v-row class="login_btn">
                 <div>
-                  <v-btn class="connect_wallet ">
+                  <v-btn class="connect_wallet">
                     <img
                       alt="Theme button"
                       src="../assets/metamask.svg"
@@ -152,25 +157,23 @@ img {
   justify-content: flex-end;
 }
 
-.close_dialog_btn{
-  background: #BADEFF 0% 0% no-repeat padding-box;
-  
+.close_dialog_btn {
+  background: #badeff 0% 0% no-repeat padding-box;
 }
 
-.title_card_alignment{
+.title_card_alignment {
   align-items: baseline;
 }
 
-.login_btn{
+.login_btn {
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.v-btn{
+.v-btn {
   display: block;
   text-align: left;
 }
-
 </style>

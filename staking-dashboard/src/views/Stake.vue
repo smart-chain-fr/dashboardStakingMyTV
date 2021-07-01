@@ -32,15 +32,15 @@
     <v-col md="12">
       <v-row>
         <v-col md="4">
-          <Card :staking_offers_title="Pack1" :apy="apy1" />
+          <Card :staking_offers_title="Pack1" :apy="apy1" :days_locked="days_locked1" />
         </v-col>
 
         <v-col md="4">
-          <Card :staking_offers_title="Pack2" :apy="apy2" />
+          <Card :staking_offers_title="Pack2" :apy="apy2" :days_locked="days_locked2"/>
         </v-col>
 
         <v-col md="4">
-          <Card :staking_offers_title="Pack3" :apy="apy3" />
+          <Card :staking_offers_title="Pack3" :apy="apy3" :days_locked="days_locked3"/>
         </v-col>
       </v-row>
     </v-col>
@@ -67,6 +67,9 @@ export default {
     apy1: "7%",
     apy2: "13%",
     apy3: "36%",
+    days_locked1: "30",
+    days_locked2: "90",
+    days_locked3: "360"
   }),
 };
 </script>
