@@ -12,8 +12,8 @@
             src="../assets/Icon material-dashboard.svg"
             height="30"
             width="30"
-          />
-          <h2>Your dashboard</h2>
+            />
+            <h2>Your dashboard</h2>
           </div>
           
         </v-col>
@@ -27,8 +27,8 @@
             height="30"
             width="30"
            
-          /> 
-          <strong>/</strong>
+            /> 
+            <strong>/</strong>
           <img
             alt="Theme button"
             src="../assets/Icon feather-moon.svg"

@@ -3,28 +3,29 @@
     <v-main>
       <v-row>
         <v-col md="12">
-          <Home />
+          <!-- <Home /> -->
+          <Stake :address="address"/>
         </v-col>
-        
       </v-row>
-
-
     </v-main>
   </v-app>
 </template>
 `
 <script>
-
-import Home from "./views/Home.vue";
+// import Home from "./views/Home.vue";
+import Stake from "./views/Stake.vue";
 
 export default {
   name: "App",
 
   components: {
-    Home
+    // Home
+    Stake,
   },
 
-  data: () => ({}),
+  data: () => ({
+    address: "0x12345678901234"
+  }),
 };
 </script>
 
@@ -42,6 +43,6 @@ export default {
   opacity: 1;
   padding: 20px !important;
   flex-direction: row;
-  margin: 20px;
+  margin: 0px;
 }
 </style>

@@ -100,7 +100,6 @@ export default {
     return {
       dialog: false,
       logged: false,
-      address: "This is an adress"
     };
   },
 };

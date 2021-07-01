@@ -2,7 +2,7 @@
   <section>
     <v-row>
       <v-col md="8">
-        <Dashboard />
+        <Dashboard address="0x1234567890987654"/>
       </v-col>
 
       <v-col md="4" class="action">
@@ -12,7 +12,7 @@
 
 <v-row>
   <v-col md="8" >
-      <Mystakingdata />
+      <Mystakingdata  />
     </v-col>
 
     <v-col md="4" class="contact_and_faq">
