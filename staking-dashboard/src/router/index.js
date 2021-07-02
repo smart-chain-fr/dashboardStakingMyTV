@@ -1,31 +1,41 @@
-import VueRouter from 'vue-router'
-import HelloWorld from '../views/HelloWorld.vue'
-import Home from '../views/Home.vue'
+import VueRouter from 'vue-router';
+import Vue from 'vue';
 
-Vue.use(Router);
+Vue.use(VueRouter);
+const routes = [
+     {
+         path: "/",
+         name: "Home",
+         component: () => import('@/views/Home'),
+         props: true
+     },
+     {
+         path: '/stake',
+         name: 'Stake',
+         component: () => import('@/layouts/DashboardLayout.vue'),
+         props: true,
+         children: [
+             {
+                 path: '/stake-home',
+                 name: 'stake-home',
+                 component: () => import('@/views/StakeHome.vue'),
+                 props: true
+             },
+             {
+                 path: '/stake-manage',
+                 name: 'stake-manage',
+                 component: () => import('@/views/StakeManage.vue')
+             }
+         ]
+     }
+];
 
-export default new Router({
+const router = new VueRouter({
     mode: "history",
-    hashbang: false,
-    abstract: true,
-    hash: false,
     base: "/mytv-dashboard/",
-    linkExactActiveClass: "active",
-    root: "/mytv-dashboard/",
-    routes = [
+    routes
+});
 
-        {
-            path: '/',
-            name: 'Home',
-            component: Home
-        },
-        {
-            path: '/helloworld',
-            name: 'HelloWorld',
-            component: HelloWorld
-        },
-        { path: "*", redirect: "/" }
-    ]
-})
+export default router;
 
 

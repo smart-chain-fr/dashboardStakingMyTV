@@ -1,20 +1,5 @@
 <template>
   <v-row>
-    <v-col md="12">
-      <!-- Back to dashboard button + Topbar -->
-      <v-row>
-        <v-col md="5">
-          <v-btn class="dashboard_button"> Back to dashboard </v-btn>
-        </v-col>
-        <v-col md="7">
-          <v-row>
-            <Topbar :address="address" />
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-col>
-    <!-- End Back to dashboard button + Topbar -->
-
     <v-row>
       <v-col md="12">
         <v-row class="staking_offers_title">
@@ -47,17 +32,15 @@
   </v-row>
 </template>
 
-
 <script>
+
 import Card from "../components/Card.vue";
-import Topbar from "../components/TopbarLayout.vue";
 
 export default {
   name: "Stake",
   props: ["address"],
   components: {
     Card,
-    Topbar,
   },
 
   data: () => ({
@@ -75,6 +58,7 @@ export default {
 </script>
 
 <style scoped>
+
 .dashboard_button {
   border: 2px solid #2e86ff;
   border-radius: 40px;

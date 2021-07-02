@@ -1,6 +1,6 @@
 
 <template>
-  <v-col md="12" class="container-contact"> <!-- Prends la place restante sur la row -->
+  <v-col md="11" class="container-contact"> <!-- Prends la place restante sur la row -->
     
       <h2 class="title-action">Contact</h2>
       <hr />
@@ -80,7 +80,7 @@ export default {
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
-
+  margin: 10px auto !important;
 }
 
 p {

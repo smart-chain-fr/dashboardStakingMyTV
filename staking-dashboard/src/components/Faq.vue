@@ -1,7 +1,7 @@
 <template>
-  <v-col md="12" class="container-faq">
+  <v-col md="11" class="container-faq">
     <v-row class="logo">
-      <br>
+      <br />
       <v-img
         src="../assets/Icon ionic-ios-help-circle.svg"
         max-width="30"
@@ -9,25 +9,16 @@
       >
       </v-img>
     </v-row>
-    <br />
-    <h2 class="title-faq">FAQ</h2>
+    <h2 class="title-faq mt-4">FAQ</h2>
     <hr />
-    <br/>
     <v-col md="12">
       <v-row class="paragraph">
         <p>Have a question ? We can help find your answers here</p>
       </v-row>
-      
     </v-col>
-
-      <v-row class="arrow-logo">
-        <v-img
-          src="../assets/arrow.svg"
-          max-width="30"
-          max-height="30"
-        ></v-img>
-      </v-row>
-    
+    <v-row class="arrow-logo mt-4">
+      <v-img src="../assets/arrow.svg" max-width="30" max-height="30"></v-img>
+    </v-row>
   </v-col>
 </template>
 
@@ -36,13 +27,10 @@
 export default {
   name: "Faq",
 
-  components: {
-    
-  },
+  components: {},
 
   data: () => ({}),
 };
-
 </script>
 
 <style scoped>
@@ -51,20 +39,22 @@ export default {
   /* align-items: center; */
 }
 
-.arrow-logo{
-  justify-content: flex-end;
+.arrow-logo {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 
-.paragraph{
+.paragraph {
   text-align: center;
   font: normal normal 300 16px/23px Circe;
   letter-spacing: 0px;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   opacity: 1;
 }
 
-hr{
-  color: #BADEFF;
+hr {
+  color: #badeff;
 }
 
 .container-faq {
@@ -74,7 +64,8 @@ hr{
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
-  /* margin: 12px; */
+  margin: 10px auto !important;
+  position: relative;
 }
 
 .title-faq {

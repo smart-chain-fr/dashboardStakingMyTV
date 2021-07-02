@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main :class="{light: isThemeLight}">
       <v-row>
         <v-col md="12">
-          <!-- <Home /> -->
-          <Stake :address="address"/>
+          <router-view/>
+          <!-- <Stake :address="address"/> -->
         </v-col>
       </v-row>
     </v-main>
@@ -12,24 +12,23 @@
 </template>
 `
 <script>
-// import Home from "./views/Home.vue";
-import Stake from "./views/Stake.vue";
+// import Stake from "./views/Stake.vue";
 
 export default {
   name: "App",
 
   components: {
-    // Home
-    Stake,
+    // Stake,
   },
 
   data: () => ({
-    address: "0x12345678901234"
+    address: "0x12345678901234",
+    isThemeLight: false
   }),
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .elements {
   flex-direction: row;
   justify-content: flex-start;
@@ -40,6 +39,12 @@ export default {
   display: flex;
   background: transparent linear-gradient(119deg, #151e41 0%, #10183b 100%) 0%
     0% no-repeat padding-box;
+
+  &.light {
+    background: transparent linear-gradient(119deg, #ced1da 0%, #10183b 100%) 0%
+    0% no-repeat padding-box;
+  }
+  color: white;
   opacity: 1;
   padding: 20px !important;
   flex-direction: row;

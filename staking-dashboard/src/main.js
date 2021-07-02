@@ -3,6 +3,7 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import VueClipboard from 'vue-clipboard2'
 import VueToast from 'vue-toast-notification';
+import router from './router';
 // Import any of available themes
 import 'vue-toast-notification/dist/theme-default.css';
 
@@ -13,6 +14,7 @@ Vue.use(VueClipboard)
 
 new Vue({
   vuetify,
-  render: h => h(App)
+  render: h => h(App),
+  router
 }).$mount('#app')
 

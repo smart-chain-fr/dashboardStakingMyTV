@@ -21,7 +21,7 @@
       <!-- Card appears when click on Connect wallet btn -->
       <v-card>
         <v-col class="connect_card" md="12">
-          <v-row class="title_card_alignment">
+          <v-row class="align-center">
             <h3 class="title_connect">Connect to a wallet</h3>
             <v-card-actions>
               <v-btn
@@ -35,62 +35,43 @@
             </v-card-actions>
           </v-row>
 
-          <v-row>
-            <v-col md="12">
-              <br />
-              <v-row class="login_btn">
-                <div>
-                  <v-btn class="connect_wallet">
-                    <img
-                      alt="Theme button"
-                      src="../assets/metamask.svg"
-                      height="30"
-                      width="30"
-                    />Metamask</v-btn
-                  >
-                </div>
-              </v-row>
+          <v-col md="12">
+            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+              <img
+                alt="Theme button"
+                src="../assets/metamask.svg"
+                height="30"
+                width="30"
+              />Metamask</v-btn
+            >
 
-              <v-row class="login_btn">
-                <div>
-                  <v-btn class="connect_wallet">
-                    <img
-                      alt="Theme button"
-                      src="../assets/trustwallet.svg"
-                      height="30"
-                      width="30"
-                    />Trust Wallet</v-btn
-                  >
-                </div>
-              </v-row>
+            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+              <img
+                alt="Theme button"
+                src="../assets/trustwallet.svg"
+                height="30"
+                width="30"
+              />Trust Wallet</v-btn
+            >
 
-              <v-row class="login_btn">
-                <div>
-                  <v-btn class="connect_wallet">
-                    <img
-                      alt="Theme button"
-                      src="../assets/ledger.svg"
-                      height="30"
-                      width="30"
-                    />Ledger</v-btn
-                  >
-                </div>
-              </v-row>
+            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+              <img
+                alt="Theme button"
+                src="../assets/ledger.svg"
+                height="30"
+                width="30"
+              />Ledger</v-btn
+            >
 
-              <v-row class="login_btn">
-                <div>
-                  <v-btn class="connect_wallet">
-                    <img
-                      alt="Theme button"
-                      src="../assets/walletconnect.svg"
-                      height="30"
-                      width="30"
-                    />Wallet Connect</v-btn
-                  >
-                </div>
-              </v-row>
-            </v-col>
-          </v-row>
+            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+              <img
+                alt="Theme button"
+                src="../assets/walletconnect.svg"
+                height="30"
+                width="30"
+              />Wallet Connect</v-btn
+            >
+          </v-col>
         </v-col>
       </v-card>
       <!-- End of card -->
@@ -159,17 +140,6 @@ img {
 
 .close_dialog_btn {
   background: #badeff 0% 0% no-repeat padding-box;
-}
-
-.title_card_alignment {
-  align-items: baseline;
-}
-
-.login_btn {
-  margin-bottom: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .v-btn {
