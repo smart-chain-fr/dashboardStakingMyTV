@@ -96,6 +96,7 @@ export default {
   opacity: 1;
   padding: 20px !important;
   color: white !important;
+  
 }
 
 .header-staked {
@@ -147,5 +148,6 @@ export default {
   color: #ffffff !important;
   text-transform: uppercase;
   background-color: #253261 !important;
+  padding: 10px;
 }
 </style>

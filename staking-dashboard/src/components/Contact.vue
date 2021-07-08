@@ -1,9 +1,9 @@
 
 <template>
-  <v-col md="11" class="container-contact"> <!-- Prends la place restante sur la row -->
+  <v-col md="12" class="container-contact"> <!-- Prends la place restante sur la row -->
     
-      <h2 class="title-action">Contact</h2>
-      <hr />
+      <h2 class="title-contact">Contact</h2>
+     
       <v-row cols="12">
         <v-col row="md-6">
           <br />
@@ -75,12 +75,12 @@ export default {
 }
 
 .container-contact {
-  display: auto;
+  /* display: auto; */
   background-color: #253261;
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
-  margin: 10px auto !important;
+
 }
 
 p {
@@ -91,12 +91,14 @@ p {
   opacity: 1;
 }
 
-.title-action {
+.title-contact {
   font: normal normal bold 18px/26px Circe;
   letter-spacing: 0px;
   color: #badeff !important;
   opacity: 1;
   text-align: center;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
 }
 
 /* .v-row{

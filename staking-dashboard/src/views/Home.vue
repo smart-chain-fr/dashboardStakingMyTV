@@ -16,7 +16,7 @@
     </v-col>
 
     <v-col md="4" class="contact_and_faq">
-      <v-row>
+      <v-row class="contact mr-1 ml-1">
         <Contact />
       </v-row>
       
@@ -62,5 +62,19 @@ export default {
 
 .action{
   display: flex;
+}
+
+.contact{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.faq{
+  margin: 0%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  align-content: flex-start;
 }
 </style>

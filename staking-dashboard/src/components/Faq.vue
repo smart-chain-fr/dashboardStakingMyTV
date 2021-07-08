@@ -10,9 +10,9 @@
       </v-img>
     </v-row>
     <h2 class="title-faq mt-4">FAQ</h2>
-    <hr />
+    
     <v-col md="12">
-      <v-row class="paragraph">
+      <v-row class="paragraph mt-2">
         <p>Have a question ? We can help find your answers here</p>
       </v-row>
     </v-col>
@@ -46,7 +46,8 @@ export default {
 }
 
 .paragraph {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font: normal normal 300 16px/23px Circe;
   letter-spacing: 0px;
   color: #ffffff !important;
@@ -75,5 +76,7 @@ hr {
   color: #badeff !important;
   opacity: 1;
   text-align: center;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
 }
 </style>

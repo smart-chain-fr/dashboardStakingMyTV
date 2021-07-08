@@ -1,7 +1,7 @@
 <template>
   <v-col md="12" class="container-action">
     <h2 class="title-action">Action</h2>
-    <hr />
+   
     <!--  Border botton possible -->
     <br />
     <v-row>
@@ -79,7 +79,8 @@ export default {
   color: #badeff !important;
   opacity: 1;
   text-align: center;
-  border-bottom: solid 0, 5px #badeff;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
 }
 
 .container-action {

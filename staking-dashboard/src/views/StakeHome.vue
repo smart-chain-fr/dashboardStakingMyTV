@@ -73,7 +73,7 @@ export default {
 
 .staking_offers_title {
   margin-left: 15px;
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: left;
   font: normal normal bold 22px/32px Circe;
   letter-spacing: 0px;
@@ -84,4 +84,5 @@ export default {
 .v-application p {
   margin-bottom: 0px;
 }
+
 </style>

@@ -9,8 +9,11 @@
       <v-card-title>{{ staking_offers_title }}</v-card-title>
 
       <v-divider class="mx-4"></v-divider>
-
-      <v-card-title class="apy">APY {{ apy }}</v-card-title>
+      <div>
+        <span class="apy"> APY {{ apy }}</span>
+        <span class="apy"> APY {{ apy }}</span>
+      </div>
+      <!-- <v-card-title class="apy">APY {{ apy }}</v-card-title> -->
 
       <v-card-actions>
         <v-dialog v-model="dialog" max-width="300">
@@ -128,11 +131,12 @@ export default {
   font: normal normal 300 18px/26px Circe;
   letter-spacing: 0px;
   color: #ffffff !important;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .apy {
   border-left: 2px solid #2e86ff;
+  margin-left: 10%;
 }
 
 .stake_button {

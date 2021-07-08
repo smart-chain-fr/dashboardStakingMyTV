@@ -99,7 +99,7 @@ h2 {
   opacity: 1;
   padding: 20px !important;
   margin-right: 20px;
-  margin-left: 10px;
+  
 }
 
 span {
