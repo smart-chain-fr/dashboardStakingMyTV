@@ -2,11 +2,10 @@
   <v-col md="12">
     <v-row>
       <v-col md="6">
-        <router-link :to="{name: 'Home'}" class="dashboard_button"> Back to dashboard </router-link>
+        <router-link :to="{name: 'Home'}" class="dashboard_button"> <v-icon>mdi-chevron-left</v-icon> Back to dashboard </router-link>
       </v-col>
       <v-col md="6" class="container-dashboard">
-        <v-row class="header-staked">
-          <v-row class="align-center justify-space-between">
+        <v-row class="header-staked align-center justify-space-between">
             <div>
               <v-row>
                 <img
@@ -33,13 +32,14 @@
               </v-row>
             </div>
             <div>
-              <v-row class="justify-space-around">
-                <div>
+              <v-row class="justify-space-between">
+                <div class="container_icons">
                   <img
                     alt="Theme button light"
                     src="@/assets/Icon feather-sun.svg"
                     height="30"
                     width="30"
+                    class="mr-3"
                   />
 
                   <strong>/</strong>
@@ -49,17 +49,17 @@
                     src="@/assets/Icon feather-moon.svg"
                     height="30"
                     width="30"
+                    class="ml-3"
                   />
                 </div>
-                <div>
+                <div class="ml-5" >
                   <!-- else show logout btn -->
-                  <v-btn v-if="connected" class="connect_wallet">
+                  <v-btn class="connect_wallet" v-if=isConnected>
                     Logout
                   </v-btn>
                 </div>
               </v-row>
             </div>
-          </v-row>
         </v-row>
       </v-col>
     </v-row>
@@ -67,25 +67,27 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: "Navigation",
   props: {
-    address: String,
+    
   },
   methods: {
     openToast() {
       this.$toast.open({
         message: "Addresse copied to clipboard",
         type: "success",
-        duration: 5000,
+        duration: 1000,
         dismissible: true,
         position: "top-right",
       });
     },
   },
-  data: () => ({
-    connected: true,
-  }),
+  computed: {
+    ...mapGetters(['isConnected','address'])
+  }
 };
 </script>
 
@@ -94,13 +96,21 @@ export default {
   background-color: #253261;
   border-radius: 15px;
   opacity: 1;
-  padding: 20px !important;
   color: white !important;
-  
 }
 
+.container_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i.v-icon.v-icon {
+  color: white;
+} 
+
 .header-staked {
-  padding: 20px;
+  margin: 30px;
 }
 
 .icon {
@@ -143,6 +153,10 @@ export default {
   border-radius: 40px;
   opacity: 1;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
   font: normal normal bold 18px/26px Circe;
   letter-spacing: 0px;
   color: #ffffff !important;

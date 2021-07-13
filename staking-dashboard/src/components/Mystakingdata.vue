@@ -17,6 +17,7 @@
                 src="../assets/triangle.svg"
                 height="30"
                 width="30"
+                class="mr-3"
               />
               <h2>My staking data</h2>
             </v-row>

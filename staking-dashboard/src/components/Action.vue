@@ -9,12 +9,14 @@
         <v-btn v-if="logged === false" class="mystake mb-5" block
           >My Stake</v-btn
         >
-        <v-btn class="mystake mb-5" block>My Stake</v-btn>
+        
+
+        <v-btn class="mystake mb-5" block> <router-link :to="{name: 'stake-manage'}" class="stake" block>My Stake </router-link></v-btn>
         <!-- <div v-else>
         <router-link to="/helloworld" class="mystake mb-5" block>My Stake</router-link>
       </div> -->
 
-        <v-btn class="stake" block> Stake</v-btn>
+        <v-btn class="stake" block> <router-link :to="{name: 'stake-home'}" class="stake" block> Stake </router-link></v-btn>
       </v-col>
     </v-row>
   </v-col>

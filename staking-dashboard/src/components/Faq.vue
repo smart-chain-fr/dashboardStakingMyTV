@@ -1,23 +1,19 @@
+
 <template>
-  <v-col md="11" class="container-faq">
-    <v-row class="logo">
-      <br />
-      <v-img
-        src="../assets/Icon ionic-ios-help-circle.svg"
-        max-width="30"
-        max-height="30"
-      >
-      </v-img>
-    </v-row>
-    <h2 class="title-faq mt-4">FAQ</h2>
-    
-    <v-col md="12">
-      <v-row class="paragraph mt-2">
-        <p>Have a question ? We can help find your answers here</p>
-      </v-row>
-    </v-col>
-    <v-row class="arrow-logo mt-4">
-      <v-img src="../assets/arrow.svg" max-width="30" max-height="30"></v-img>
+  <v-col md="12" class="container-faq">
+    <!-- Prends la place restante sur la row -->
+    <v-row class="faq_icon">
+      <img src="@/assets/faq.svg" alt="Question" 
+    /></v-row>
+
+    <h2 class="title-faq">Faq</h2>
+
+    <v-row cols="12">
+      <v-col>
+        <p class="mr-5 ml-5">
+          Have a question ? We can help you find your answers here
+        </p>
+      </v-col>
     </v-row>
   </v-col>
 </template>
@@ -25,52 +21,44 @@
 
 <script>
 export default {
-  name: "Faq",
+  name: "Mystakingdata",
 
   components: {},
 
-  data: () => ({}),
+  data: () => ({
+    asset: [{ faq: "@/assets/faq.svg" }],
+  }),
 };
 </script>
 
+
 <style scoped>
-.logo {
-  justify-content: center;
-  /* align-items: center; */
-}
-
-.arrow-logo {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-}
-
-.paragraph {
-  display: flex;
-  justify-content: center;
-  font: normal normal 300 16px/23px Circe;
+#title {
+  text-align: left;
+  font: normal normal bold 18px/26px Circe;
   letter-spacing: 0px;
-  color: #ffffff !important;
+  color: #badeff;
   opacity: 1;
 }
 
-hr {
-  color: #badeff;
-}
-
 .container-faq {
-  display: flex;
-  flex-direction: column;
+  /* display: auto; */
   background-color: #253261;
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
-  margin: 10px auto !important;
-  position: relative;
+}
+
+p {
+  font: normal normal 300 16px/33px Circe;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .title-faq {
-  /* display: table; */
   font: normal normal bold 18px/26px Circe;
   letter-spacing: 0px;
   color: #badeff !important;
@@ -78,5 +66,23 @@ hr {
   text-align: center;
   border-bottom: 1px solid grey;
   padding-bottom: 5px;
+}
+
+.faq_icon {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+hr {
+  color: #badeff;
+}
+
+.logo-position {
+  justify-content: center;
+}
+
+p {
+  margin-left: 10px;
 }
 </style>

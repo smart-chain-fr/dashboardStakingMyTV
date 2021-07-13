@@ -1,6 +1,6 @@
 <template>
     <div id="layout-dashboard">
-        <Navigation address="0x1234567890987654"/>
+        <Navigation/>
         <router-view/>
     </div>
 </template>
@@ -8,6 +8,7 @@
 <script>
 import Navigation from "./components/Navigation";
 
+// import {mapGetters} from "vuex";
 export default {
     name: "DashboardLayout",
     props: {
@@ -15,6 +16,9 @@ export default {
     },
     components: {
         Navigation
+    },
+    computed: {
+        
     }
 }
 </script>

@@ -1,15 +1,13 @@
 <template>
   <v-row>
     <v-card class="mx-auto my-12">
-      <v-img
-        height="250"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
+      <div class="card_image">
 
-      <v-card-title>{{ staking_offers_title }}</v-card-title>
+        <p class="pack_name"> {{ staking_offers_title }}</p>
+      </div>
 
       <v-divider class="mx-4"></v-divider>
-      <div>
+      <div class="pack_data">
         <span class="apy"> APY {{ apy }}</span>
         <span class="apy"> APY {{ apy }}</span>
       </div>
@@ -32,7 +30,7 @@
                       {{ staking_offers_title }}
                     </p>
                   </v-row>
-                  
+
                   <v-row>
                     <input v-model="message" placeholder="The amount" />
                     <p>Minimum 1000 MYTV ~ 100 USD</p>
@@ -43,8 +41,7 @@
                   </v-row>
 
                   <v-row>
-                    <p>Interest period {{days_locked}} days</p>
-                    
+                    <p>Interest period {{ days_locked }} days</p>
                   </v-row>
 
                   <v-row>
@@ -52,8 +49,8 @@
                   </v-row>
 
                   <v-row>
-                    <p>{{days_locked}}-Days APY</p>
-                    <p>MYTV {{apy}}</p>
+                    <p>{{ days_locked }}-Days APY</p>
+                    <p>MYTV {{ apy }}</p>
                   </v-row>
                 </v-col>
               </v-row>
@@ -73,7 +70,8 @@ export default {
   components: {},
 
   data: () => ({
-    //dialog: false
+    dialog: false,
+    message: 'ok'
   }),
   methods: {
     getNow: function () {
@@ -155,5 +153,26 @@ input {
   border-radius: 20px;
   opacity: 1;
   padding: 10px;
+}
+
+.card_image{
+   background-image: url("https://cdn.vuetifyjs.com/images/cards/cooking.png");
+   height: 200px;
+   width: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
+.pack_name{
+  text-align: left;
+  font: normal normal bold 48px/71px Circe;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+
+.pack_data{
+    display: flex;
+    flex-direction: column;
 }
 </style>
