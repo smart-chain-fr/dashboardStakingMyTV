@@ -1,3 +1,11 @@
+@import "variables";
+
 a {
     text-decoration: none;
+}
+
+.container-dashboard {
+    &.dark {
+        background-color: $dark;
+    }
 }

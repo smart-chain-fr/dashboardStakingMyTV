@@ -20,7 +20,7 @@
             </div>
             <div>
               <v-row>
-                <p class="address mr-4" v-bind:address="address">
+                <p class="address mr-4">
                   {{ address }}
                 </p>
                 <img

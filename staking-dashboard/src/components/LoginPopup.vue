@@ -2,20 +2,23 @@
   <v-row class="flex_row">
     <v-dialog v-model="dialog" max-width="300">
       <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          v-if="isConnected"
+          class="connect_wallet"
+          @click="setConnected(false)"
+        >
+          Logout
+        </v-btn>
+
         <!-- if not logged -->
         <v-btn
-          v-if="logged === false"
+          v-else-if="isConnected === false"
           v-bind="attrs"
           v-on="on"
           class="connect_wallet"
         >
           Connect Wallet
         </v-btn>
-
-        <!-- else show logout btn -->
-        <div v-else>
-          <v-btn class="connect_wallet"> Logout </v-btn>
-        </div>
       </template>
 
       <!-- Card appears when click on Connect wallet btn -->
@@ -36,16 +39,17 @@
           </v-row>
 
           <v-col md="12">
-            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+            <v-btn @click="setConnected(true)" class="connect_wallet justify-center mt-4 mb-4" block>
               <img
                 alt="Theme button"
                 src="../assets/metamask.svg"
                 height="30"
                 width="30"
+                
               />Metamask</v-btn
             >
 
-            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+            <v-btn @click="setConnected(true)" class="connect_wallet justify-center mt-4 mb-4" block>
               <img
                 alt="Theme button"
                 src="../assets/trustwallet.svg"
@@ -54,7 +58,7 @@
               />Trust Wallet</v-btn
             >
 
-            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+            <v-btn @click="setConnected(true)" class="connect_wallet justify-center mt-4 mb-4" block>
               <img
                 alt="Theme button"
                 src="../assets/ledger.svg"
@@ -63,7 +67,7 @@
               />Ledger</v-btn
             >
 
-            <v-btn class="connect_wallet justify-center mt-4 mb-4" block>
+            <v-btn @click="setConnected(true)" class="connect_wallet justify-center mt-4 mb-4" block>
               <img
                 alt="Theme button"
                 src="../assets/walletconnect.svg"
@@ -80,13 +84,19 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "LoginPopup",
   data() {
     return {
       dialog: false,
-      logged: false,
     };
+  },
+  methods: {
+    ...mapActions(["setConnected"]),
+  },
+  computed: {
+    ...mapGetters(["isConnected"]),
   },
 };
 </script>

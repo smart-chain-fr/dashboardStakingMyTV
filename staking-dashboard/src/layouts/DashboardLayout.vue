@@ -1,29 +1,29 @@
 <template>
-    <div id="layout-dashboard">
-        <Navigation/>
-        <router-view/>
-    </div>
+  <div id="layout-dashboard">
+    <Navigation />
+    <router-view />
+  </div>
 </template>
 
 <script>
 import Navigation from "./components/Navigation";
+import { mapGetters } from "vuex";
 
-// import {mapGetters} from "vuex";
 export default {
-    name: "DashboardLayout",
-    props: {
-        source: String
-    },
-    components: {
-        Navigation
-    },
-    computed: {
-        
-    }
-}
+  name: "DashboardLayout",
+  props: {
+    source: String,
+  },
+  components: {
+    Navigation,
+  },
+  computed: {
+      ...mapGetters(['theme'])
+  },
+};
 </script>
 <style>
-    html {
-        background-color: black!important;
-    }
+html {
+  background-color: black !important;
+}
 </style>

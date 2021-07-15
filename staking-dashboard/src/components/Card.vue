@@ -2,14 +2,13 @@
   <v-row>
     <v-card class="mx-auto my-12">
       <div class="card_image">
-
-        <p class="pack_name"> {{ staking_offers_title }}</p>
+        <p class="pack_name">{{ staking_offers_title }}</p>
       </div>
 
       <v-divider class="mx-4"></v-divider>
       <div class="pack_data">
         <span class="apy"> APY {{ apy }}</span>
-        <span class="apy"> APY {{ apy }}</span>
+        <span class="apy"> Lock {{ days_locked }}</span>
       </div>
       <!-- <v-card-title class="apy">APY {{ apy }}</v-card-title> -->
 
@@ -71,7 +70,7 @@ export default {
 
   data: () => ({
     dialog: false,
-    message: 'ok'
+    message: "ok",
   }),
   methods: {
     getNow: function () {
@@ -92,10 +91,19 @@ export default {
 </script>
 
 <style scoped>
+input {
+  text-align: left;
+  font: normal normal 300 16px/23px Circe;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.5;
+}
 .subcard_position {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px;
+  background: #1f2952 0% 0% no-repeat padding-box;
 }
 
 .stake_subcard_title {
@@ -153,26 +161,27 @@ input {
   border-radius: 20px;
   opacity: 1;
   padding: 10px;
+  width: 200px;
 }
 
-.card_image{
-   background-image: url("https://cdn.vuetifyjs.com/images/cards/cooking.png");
-   height: 200px;
-   width: 300px;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
+.card_image {
+  background-image: url("https://cdn.vuetifyjs.com/images/cards/cooking.png");
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.pack_name{
+.pack_name {
   text-align: left;
   font: normal normal bold 48px/71px Circe;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.pack_data{
-    display: flex;
-    flex-direction: column;
+.pack_data {
+  display: flex;
+  flex-direction: column;
 }
 </style>
