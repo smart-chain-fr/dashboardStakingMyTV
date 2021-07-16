@@ -1,6 +1,6 @@
 
 const state = {
-    isConnected: true,
+    isConnected: false,
     address: "0x123455555567890"
 }
 

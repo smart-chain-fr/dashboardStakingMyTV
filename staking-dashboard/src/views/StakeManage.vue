@@ -16,14 +16,14 @@
     </v-row>
 
     <v-row class="tab">
-        <v-col md="12">
+      <v-col md="12">
         <v-data-table
-            :headers="headers"
-            :items="stakes"
-            :items-per-page="5"
-            class="elevation-1"
+          :headers="headers"
+          :items="stakes"
+          :items-per-page="5"
+          class="elevation-1"
         ></v-data-table>
-        </v-col>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -34,57 +34,55 @@ export default {
 
   data() {
     return {
-       headers: [
-          {
-            text: 'Pack',
-            align: 'start',
-            sortable: false,
-            value: 'pack',
-          },
-          { text: 'MYTV stake', value: 'mytv_stake' },
-          { text: 'Duration (days)', value: 'duration' },
-          { text: 'Redemption date', value: 'redemption_date' },
-          { text: 'Annualized Interest Rate', value: 'annualized_interest_rate' },
-          { text: 'MyTV earned', value: 'mytv_earned' },
-          { text: 'Operation', value: 'operation' },
-        ],
-        stakes: [
-          {
-            pack: 'Pack 3, 360j',
-            mytv_stake: 120980.00,
-            duration: 6,
-            redemption_date: "2022-12-23",
-            annualized_interest_rate: '6.48%',
-            mytv_earned: '0.783563',
-            Operation: "Mettre boutons"
-          },
-          {
-            pack: 'Pack 1, 30j',
-            mytv_stake: 1310.00,
-            duration: 12,
-            redemption_date: "2021-06-10",
-            annualized_interest_rate: '6.48%',
-            mytv_earned: '0.783563',
-            Operation: "Mettre boutons"
-          },
-          {
-            pack: 'Pack 1, 30j',
-            mytv_stake: 1310.00,
-            duration: 12,
-            redemption_date: "2021-06-10",
-            annualized_interest_rate: '6.48%',
-            mytv_earned: '0.783563',
-            Operation: "Mettre boutons"
-          },
-        ],
+      headers: [
+        {
+          text: "Pack",
+          align: "start",
+          sortable: false,
+          value: "pack",
+        },
+        { text: "MYTV stake", value: "mytv_stake" },
+        { text: "Duration (days)", value: "duration" },
+        { text: "Redemption date", value: "redemption_date" },
+        { text: "Annualized Interest Rate", value: "annualized_interest_rate" },
+        { text: "MyTV earned", value: "mytv_earned" },
+        { text: "Operation", value: "operation" },
+      ],
+      stakes: [
+        {
+          pack: "Pack 3, 360j",
+          mytv_stake: 120980.0,
+          duration: 6,
+          redemption_date: "2022-12-23",
+          annualized_interest_rate: "6.48%",
+          mytv_earned: "0.783563",
+          Operation: "Mettre boutons",
+        },
+        {
+          pack: "Pack 1, 30j",
+          mytv_stake: 1310.0,
+          duration: 12,
+          redemption_date: "2021-06-10",
+          annualized_interest_rate: "6.48%",
+          mytv_earned: "0.783563",
+          Operation: "Mettre boutons",
+        },
+        {
+          pack: "Pack 1, 30j",
+          mytv_stake: 1310.0,
+          duration: 12,
+          redemption_date: "2021-06-10",
+          annualized_interest_rate: "6.48%",
+          mytv_earned: "0.783563",
+          Operation: "Mettre boutons",
+        },
+      ],
       options: {
         // see the options API
       },
     };
   },
 };
-
-  
 </script>
 
 <style scoped>
@@ -100,9 +98,13 @@ export default {
   opacity: 1;
 }
 
-th.VueTables__sortable{
-    background: #253261 0% 0% no-repeat padding-box !important;
-    border-radius: 15px 15px 0px 0px;
-    opacity: 1;
-}
+/* tr{
+  background: #253261 0% 0% no-repeat padding-box;
+  border-radius: 15px 15px 0px 0px;
+  opacity: 1;
+  text-align: center;
+font: normal normal 300 16px/23px Circe;
+letter-spacing: 0px;
+color: #FFFFFF;
+} */
 </style>

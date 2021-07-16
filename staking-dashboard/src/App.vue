@@ -4,7 +4,6 @@
       <v-row>
         <v-col md="12">
           <router-view/>
-          <!-- <Stake :address="address"/> -->
         </v-col>
       </v-row>
     </v-main>
@@ -12,7 +11,6 @@
 </template>
 `
 <script>
-// import Stake from "./views/Stake.vue";
 
 export default {
   name: "App",
@@ -46,7 +44,7 @@ export default {
   }
   color: white;
   opacity: 1;
-  padding: 20px !important;
+  padding: 31px !important;
   flex-direction: row;
   margin: 0px;
 }

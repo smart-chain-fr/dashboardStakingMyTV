@@ -7,12 +7,12 @@
 
       <v-divider class="mx-4"></v-divider>
       <div class="pack_data">
-        <span class="apy"> APY {{ apy }}</span>
-        <span class="apy"> Lock {{ days_locked }}</span>
+        <span class="apy mt-5"> APY {{ apy }}</span>
+        <span class="apy mb-5"> Lock {{ days_locked }}</span>
       </div>
       <!-- <v-card-title class="apy">APY {{ apy }}</v-card-title> -->
 
-      <v-card-actions>
+      <v-card-actions class="justify-center">
         <v-dialog v-model="dialog" max-width="300">
           <template v-slot:activator="{ on, attrs }">
             <v-btn text v-bind="attrs" v-on="on" class="btn_from_card">
@@ -126,6 +126,7 @@ input {
   letter-spacing: 0px;
   text-transform: uppercase;
   opacity: 1;
+  
 }
 
 .v-card {
@@ -184,4 +185,6 @@ input {
   display: flex;
   flex-direction: column;
 }
+
+
 </style>

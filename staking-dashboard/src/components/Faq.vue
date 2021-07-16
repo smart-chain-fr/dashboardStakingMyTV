@@ -47,6 +47,7 @@ export default {
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
+  margin-top: -10px;
 }
 
 p {

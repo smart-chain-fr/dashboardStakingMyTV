@@ -106,7 +106,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   border: 2px solid #2e86ff;
-  border-radius: 15px;
+  border-radius: 40px;
   color: white !important;
   background-color: #253261 !important;
   padding: 60px;

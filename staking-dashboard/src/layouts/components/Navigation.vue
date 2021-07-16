@@ -36,7 +36,7 @@
                 <div class="container_icons">
                   <img
                     alt="Theme button light"
-                    src="@/assets/Icon feather-sun.svg"
+                    src="@/assets/Icon feather-sun_dark.svg"
                     height="30"
                     width="30"
                     class="mr-3"
@@ -46,7 +46,7 @@
 
                   <img
                     alt="Theme button dark"
-                    src="@/assets/Icon feather-moon.svg"
+                    src="@/assets/Icon feather-moon_dark.svg"
                     height="30"
                     width="30"
                     class="ml-3"

@@ -9,13 +9,11 @@ import store from '@/store';
 // Import any of available themes
 import 'vue-toast-notification/dist/theme-default.css';
 import '@/assets/scss/style.scss';
-import VueTables from 'vue-tables-2';
 
 Vue.config.productionTip = false
 Vue.use(VueToast)
 Vue.use(VueClipboard);
 Vue.use(Vuex);
-Vue.use(VueTables.ClientTable);
 
 const vuex = new Vuex.Store({...store});
 
