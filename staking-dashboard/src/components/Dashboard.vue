@@ -32,13 +32,16 @@
                 src="@/assets/Icon feather-sun_dark.svg"
                 height="30"
                 width="30"
+                @click="setTheme(light)"
               />
+              
               <!-- <strong>/</strong> -->
               <img
                 alt="Theme button"
                 src="@/assets/Icon feather-moon_dark.svg"
                 height="30"
                 width="30"
+                @click="setTheme(dark)"
               />
             </div>
             <LoginPopup />
@@ -53,7 +56,7 @@
       <v-col md="4">
         <div class="title-staked">Total MYTV staked</div>
         <div class="container-staked">
-          <span>MYTV</span>
+          <span>11,100,100 MYTV</span>
           <span>....USD</span>
         </div>
       </v-col>
@@ -61,7 +64,7 @@
       <v-col md="4">
         <div class="title-staked">Total rewards</div>
         <div class="container-staked">
-          <span>MYTV</span>
+          <span>1,100,100 MYTV</span>
           <span>....USD</span>
         </div>
       </v-col>
@@ -69,7 +72,7 @@
       <v-col md="4">
         <div class="title-staked">My wallet</div>
         <div class="container-staked">
-          <span>MYTV</span>
+          <span>11,100,100 MYTV</span>
           <span>....USD</span>
         </div>
       </v-col>
@@ -80,7 +83,7 @@
 
 <script>
 import LoginPopup from "./LoginPopup";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Dashboard",
@@ -97,7 +100,7 @@ export default {
         dismissible: true,
         position: "top-right",
       });
-    },
+    },...mapActions(["setTheme"]),
   },
   computed: {
     ...mapGetters(["isConnected", "address", "theme"]),
@@ -106,7 +109,7 @@ export default {
         dark: this.theme === "dark",
         light: this.theme === "light",
       };
-    },
+    }
   },
 };
 </script>
@@ -159,7 +162,11 @@ export default {
       margin-right: 32px;
       font: normal normal bold 16px/23px Circe;
       letter-spacing: 0px;
-      color: $dark-subtitle;
+      color: $subtitle;
+    }
+
+    .address{
+      color: white;
     }
 
     .container-staked {
@@ -169,12 +176,14 @@ export default {
       display: flex;
       align-items: flex-end;
       flex-direction: column;
+        
     }
 
     span {
       font: normal normal 300 18px/26px Circe;
       letter-spacing: 0px;
       color: $light;
+      margin-right: 12px;
     }
   }
 
@@ -185,20 +194,37 @@ export default {
       color: $dark-primary;
     }
 
+    .address{
+      color: black;
+    }
+
     .container-staked {
       background: $light-secondary 0% 0% no-repeat padding-box;
       border-radius: 10px;
       padding: 20px;
       display: flex;
+      align-items: flex-end;
       flex-direction: column;
     }
   }
 
   .title-staked {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 32px;
-  }
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 32px;
+      font: normal normal bold 16px/23px Circe;
+      letter-spacing: 0px;
+      color: $light-subtitle;
+    }
+
+    span {
+      font: normal normal 300 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $light-tertiary;
+      margin-right: 12px;
+     
+    }
+
 }
 
 .top-alignement {

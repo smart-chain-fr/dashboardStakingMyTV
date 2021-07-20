@@ -1,9 +1,9 @@
 
 <template>
-  <v-col md="12" class="container-faq">
+  <v-col md="12" class="container-faq" :class="classObject">
     <!-- Prends la place restante sur la row -->
     <v-row class="faq_icon">
-      <img src="@/assets/faq.svg" alt="Question" 
+      <img src="@/assets/faq.svg" alt="Question"
     /></v-row>
 
     <h2 class="title-faq">Faq</h2>
@@ -20,6 +20,8 @@
 
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "Mystakingdata",
 
@@ -28,51 +30,81 @@ export default {
   data: () => ({
     asset: [{ faq: "@/assets/faq.svg" }],
   }),
+  computed: {
+    ...mapGetters(["theme"]),
+    classObject() {
+      return {
+        dark: this.theme === "dark",
+        light: this.theme === "light",
+      };
+    },
+  },
 };
 </script>
 
 
-<style scoped>
-#title {
-  text-align: left;
-  font: normal normal bold 18px/26px Circe;
-  letter-spacing: 0px;
-  color: #badeff;
-  opacity: 1;
-}
+<style lang="scss" scoped>
+@import "../assets/scss/variables";
 
 .container-faq {
   /* display: auto; */
-  background-color: #253261;
+
   border-radius: 15px;
   opacity: 1;
   padding: 20px !important;
   margin-top: -10px;
-}
 
-p {
-  font: normal normal 300 16px/33px Circe;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-  display: flex;
-  justify-content: center;
-}
+  &.dark {
+    background-color: $dark-primary;
 
-.title-faq {
-  font: normal normal bold 18px/26px Circe;
-  letter-spacing: 0px;
-  color: #badeff !important;
-  opacity: 1;
-  text-align: center;
-  border-bottom: 1px solid grey;
-  padding-bottom: 5px;
+    p {
+      font: normal normal 300 16px/33px Circe;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .title-faq {
+      font: normal normal bold 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $subtitle !important;
+      opacity: 1;
+      text-align: center;
+      border-bottom: 1px solid grey;
+      padding-bottom: 5px;
+    }
+  }
+
+  &.light {
+    background-color: $light;
+
+    p {
+      font: normal normal 300 16px/33px Circe;
+      letter-spacing: 0px;
+      color: black;
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .title-faq {
+      font: normal normal bold 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $dark-secondary !important;
+      opacity: 1;
+      text-align: center;
+      border-bottom: 1px solid grey;
+      padding-bottom: 5px;
+    }
+  }
 }
 
 .faq_icon {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
 }
 
 hr {

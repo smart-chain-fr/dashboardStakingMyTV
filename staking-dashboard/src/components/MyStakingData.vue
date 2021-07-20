@@ -1,5 +1,5 @@
 <template>
-  <v-row class="ml-1 mt-2 mr-1 container-staking">
+  <v-row class="ml-1 mt-2 mr-1 container-staking" :class="classObject">
     <!-- margins -->
 
     <v-col md="4">
@@ -10,7 +10,7 @@
           <!-- Width of objects inside column -->
           <!-- No impact because it's too little -->
           <!-- Icon + title -->
-          <v-row class="justify-space-between header-staked">
+          <v-row class="justify-center header-staked">
             <v-row>
               <img
                 alt="Your dashboard"
@@ -50,6 +50,12 @@
       <!-- Rigth column -->
       <v-row>
         <v-col md="12">
+          <!-- <v-img
+          src="@/assets/Icon material-info.svg"
+          width="30"
+          height="30"
+          >
+          </v-img> -->
           <p class="contract_info">Contract info</p>
         </v-col>
       </v-row>
@@ -79,6 +85,7 @@
 <script>
 import ContractInfo from "@/components/ContractInfo.vue";
 import StakingDataElement from "@/components/StakingDataElement.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Mystakingdata",
@@ -87,7 +94,15 @@ export default {
     ContractInfo,
     StakingDataElement,
   },
-
+  computed: {
+    ...mapGetters(["theme"]),
+    classObject() {
+      return {
+        dark: this.theme === "dark",
+        light: this.theme === "light",
+      };
+    },
+  },
   data: () => ({
     contract_data_infos: [
       {
@@ -126,25 +141,62 @@ export default {
 </script>
 
 
-<style scoped>
-.contract_info {
-  text-align: center;
-  font: normal normal bold 18px/26px Circe;
-  letter-spacing: 0px;
-  color: #badeff;
-  opacity: 1;
-}
-
-h2 {
-  color: white;
-}
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
 
 .container-staking {
-  background-color: #253261;
   border-radius: 15px;
   opacity: 1;
   padding: 16px !important;
   margin: 10px;
+
+  &.dark {
+    background-color: $dark-primary;
+
+    .contract_info {
+      text-align: center;
+      font: normal normal bold 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $subtitle;
+      opacity: 1;
+    }
+
+    .container-staked {
+      background: $dark-tertiary 0% 0% no-repeat padding-box;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      color: $light;
+    }
+  }
+
+  &.light {
+    background-color: $light;
+
+    .contract_info {
+      text-align: center;
+      font: normal normal bold 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $dark-primary;
+      opacity: 1;
+    }
+
+    .container-staked {
+      background: $light-secondary 0% 0% no-repeat padding-box;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      color: $light-title;
+    }
+  }
 }
 
 span {
@@ -155,14 +207,6 @@ span {
 
 .title-staked {
   margin-left: 55%;
-}
-
-.container-staked {
-  background: #10183b 0% 0% no-repeat padding-box;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
 .v-btn {
@@ -180,7 +224,7 @@ hr {
   color: #badeff;
 }
 
-.staking_data_elements{
+.staking_data_elements {
   margin-bottom: -35px;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-main :class="{light: isThemeLight}">
+    <v-main :class="classObject">
       <v-row>
         <v-col md="12">
-          <router-view/>
+          <router-view />
         </v-col>
       </v-row>
     </v-main>
@@ -11,22 +11,31 @@
 </template>
 `
 <script>
-
+import { mapGetters } from "vuex";
 export default {
   name: "App",
 
   components: {
     // Stake,
   },
+  computed: {
+    ...mapGetters(["theme"]),
+    classObject() {
+      return {
+        dark: this.theme === "dark",
+        light: this.theme === "light",
+      };
+    },
+  },
 
   data: () => ({
     address: "0x12345678901234",
-    isThemeLight: false
   }),
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/variables";
 .elements {
   flex-direction: row;
   justify-content: flex-start;
@@ -35,17 +44,15 @@ export default {
 
 .v-main {
   display: flex;
-  background: transparent linear-gradient(119deg, #151e41 0%, #10183b 100%) 0%
-    0% no-repeat padding-box;
-
-  &.light {
-    background: transparent linear-gradient(119deg, #ced1da 0%, #10183b 100%) 0%
-    0% no-repeat padding-box;
-  }
-  color: white;
-  opacity: 1;
   padding: 31px !important;
   flex-direction: row;
   margin: 0px;
+
+  &.dark {
+    background: $dark-app-background;
+  }
+  &.light {
+    background: $light-app-background;
+  }
 }
 </style>

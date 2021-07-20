@@ -1,5 +1,5 @@
 <template>
-  <v-col md="12" class="container-action">
+  <v-col md="12" class="container-action" :class="classObject">
     <h2 class="title-action">Action</h2>
 
     <!--  Border botton possible -->
@@ -38,13 +38,55 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["isConnected"]),
+    ...mapGetters(["isConnected", "theme"]),
+    classObject() {
+      return {
+        dark: this.theme === "dark",
+        light: this.theme === "light",
+      };
+    },
   },
 };
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/variables";
+
+.container-action {
+  border-radius: 15px;
+  opacity: 1;
+  margin-bottom: 17px !important;
+
+  &.dark {
+    background-color: $dark-primary;
+
+    .title-action {
+      font: normal normal bold 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $subtitle !important;
+      opacity: 1;
+      text-align: center;
+      border-bottom: 1px solid grey;
+      padding-bottom: 5px;
+    }
+  }
+
+  &.light {
+    background-color: white;
+
+    .title-action {
+      font: normal normal bold 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $dark-secondary !important;
+      opacity: 1;
+      text-align: center;
+      border-bottom: 1px solid grey;
+      padding-bottom: 5px;
+    }
+  }
+}
+
 .button-row {
   display: block;
   flex-direction: column;
@@ -71,9 +113,10 @@ export default {
   text-align: center;
   font: normal normal bold 16px/23px Circe;
   letter-spacing: 0px;
-  color: #ffffff !important;
+  color: $light !important;
   text-transform: uppercase;
   display: block;
+  position: relative;
 }
 
 .stake {
@@ -84,26 +127,9 @@ export default {
   text-align: center;
   font: normal normal bold 16px/23px Circe;
   letter-spacing: 0px;
-  color: #ffffff !important;
+  color: $light !important;
   text-transform: uppercase;
   opacity: 1;
   display: block;
-}
-
-.title-action {
-  font: normal normal bold 18px/26px Circe;
-  letter-spacing: 0px;
-  color: #badeff !important;
-  opacity: 1;
-  text-align: center;
-  border-bottom: 1px solid grey;
-  padding-bottom: 5px;
-}
-
-.container-action {
-  background-color: #253261;
-  border-radius: 15px;
-  opacity: 1;
-  margin-bottom: 17px !important;
 }
 </style>
