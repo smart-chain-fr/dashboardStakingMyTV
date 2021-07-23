@@ -1,6 +1,6 @@
-<template :class="classObject">
+<template>
   <v-row class="flex_row" :class="classObject">
-    <v-dialog v-model="dialog" max-width="300">
+    <v-dialog v-model="dialog" max-width="400">
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           v-if="isConnected"
@@ -22,9 +22,9 @@
       </template>
 
       <!-- Card appears when click on Connect wallet btn -->
-      <v-card>
-        <v-col class="connect_card"  md="12">
-          <v-row class="align-center">
+      <v-card :class="classObject" class="rounded-xl">
+        <v-col class="connect_card" md="12">
+          <v-row class="align-center title-popin">
             <h3 class="title_connect">Connect to a wallet</h3>
             <v-card-actions>
               <v-btn
@@ -38,7 +38,7 @@
             </v-card-actions>
           </v-row>
 
-          <v-col md="12">
+          <v-col md="10" class="mt-5">
             <v-btn
               @click="setConnected(true)"
               class="connect_wallet justify-center mt-4 mb-4"
@@ -109,9 +109,10 @@ export default {
   },
   methods: {
     ...mapActions(["setConnected"]),
+    
   },
   computed: {
-    ...mapGetters(["isConnected","theme"]),
+    ...mapGetters(["isConnected", "theme"]),
 
     classObject() {
       return {
@@ -119,7 +120,6 @@ export default {
         light: this.theme === "light",
       };
     },
-  
   },
 };
 </script>
@@ -131,9 +131,89 @@ img {
   margin-right: 5px;
 }
 
+.v-card {
+  .title-popin {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+
+    h3 {
+      font-weight: 300;
+    }
+  }
+
+  .connect_card {
+    border-radius: 15px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .close_dialog_btn {
+    position: absolute;
+    right: 50px;
+  }
+
+  .connect_wallet {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 40px;
+    padding: 25px!important;
+    border: 2px solid $border-blue;
+  }
+
+  &.light {
+    background-color: $light !important;
+
+    .title-popin {
+      color: $dark-secondary;
+      border-bottom: 1px solid $dark-secondary;
+    }
+
+    .close_dialog_btn {
+      color: $dark-secondary;
+      border: 1px solid $dark-secondary;
+    }
+
+    .connect_wallet {
+      color: $dark-secondary;
+    }
+  }
+
+  &.dark {
+    background-color: $dark-primary !important;
+
+    .title-popin {
+      color: $light-secondary;
+      border-bottom: 1px solid $light-secondary;
+    }
+
+    .close_dialog_btn {
+      color: $light;
+      border: 1px solid $light-secondary;
+    }
+
+    .connect_wallet {
+      background-color: $dark-primary;
+      color: $light-secondary;
+    }
+  }
+}
+
 .flex_row {
   display: flex;
   justify-content: flex-end;
+
+  .connect_wallet {
+    display: flex;
+    justify-content: flex-end;
+    border: 2px solid $border-blue;
+    border-radius: 40px;
+    color: $light !important;
+    padding: 20px;
+  }
 
   &.dark {
     .close_dialog_btn {
@@ -141,22 +221,7 @@ img {
     }
 
     .connect_wallet {
-      display: flex;
-      justify-content: flex-end;
-      border: 2px solid $border-blue;
-      border-radius: 40px;
-      color: $light !important;
-      background-color: #253261 !important;
-      padding: 32px;
-    }
-
-    .connect_card {
-      background: #1f2952 0% 0% no-repeat padding-box;
-      border-radius: 15px;
-      opacity: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background-color: $dark-primary;
     }
 
     .title_connect {
@@ -183,16 +248,6 @@ img {
       color: black !important;
       background-color: $light !important;
       padding: 20px;
-
-    }
-
-    .connect_card {
-      background: $light-popup 0% 0% no-repeat padding-box;
-      border-radius: 15px;
-      opacity: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .title_connect {

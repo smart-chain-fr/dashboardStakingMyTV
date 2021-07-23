@@ -35,7 +35,6 @@
                 @click="setTheme(light)"
               />
               
-              <!-- <strong>/</strong> -->
               <img
                 alt="Theme button"
                 src="@/assets/Icon feather-moon_dark.svg"
@@ -89,7 +88,10 @@ export default {
   name: "Dashboard",
   components: { LoginPopup },
   data() {
-    return {};
+    return {
+      light: "light",
+      dark:"dark"
+    };
   },
   methods: {
     openToast() {
@@ -116,7 +118,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../assets/scss/variables";
+@import "@/assets/scss/variables";
 
 .container-dashboard {
   border-radius: 15px;
@@ -134,7 +136,7 @@ export default {
     align-items: center;
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 180px;
+    // width: 180px;
   }
 
   .relative_position_top_title {

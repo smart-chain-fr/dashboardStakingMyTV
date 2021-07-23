@@ -5,45 +5,29 @@
 
     <h2 class="title-contact">Contact</h2>
 
-    <v-row cols="12">
+    <v-row cols="12" class="container_logo">
       <v-col row="md-6">
         <br />
-        <v-row cols="6" class="logo-position">
-          <v-img
-            src="../assets/telegram.svg"
-            max-width="30"
-            max-height="30"
-          ></v-img>
+        <v-row cols="6" class="logo-position mb-5">
+          <img src="../assets/telegram.svg" />
           <p>Telegram</p>
         </v-row>
 
         <v-row cols="6" class="logo-position">
-          <v-img
-            src="../assets/twitter.svg"
-            max-width="30"
-            max-height="30"
-          ></v-img>
+          <img src="../assets/twitter.svg" />
           <p>Twitter</p>
         </v-row>
       </v-col>
 
       <v-col row="md-6">
         <br />
-        <v-row cols="6" class="logo-position">
-          <v-img
-            src="../assets/discord.svg"
-            max-width="30"
-            max-height="30"
-          ></v-img>
+        <v-row cols="6" class="logo-position mb-5">
+          <img src="../assets/discord.svg" />
           <p>Discord</p>
         </v-row>
 
         <v-row cols="6" class="logo-position">
-          <v-img
-            src="../assets/triangle.svg"
-            max-width="30"
-            max-height="30"
-          ></v-img>
+          <img src="../assets/triangle.svg" />
           <p>Website</p>
         </v-row>
       </v-col>
@@ -77,33 +61,42 @@ export default {
 @import "../assets/scss/variables";
 
 .container-contact {
-  /* display: auto; */
-
   border-radius: 15px;
-  opacity: 1;
   padding: 20px !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
+
+  .title-contact {
+    font: normal normal bold 18px/26px Circe;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 70%;
+  }
+
+  .container_logo {
+    padding: 0 20px;
+    width: 100%;
+    
+  }
+
+  p {
+    font: normal normal 300 16px/33px Circe;
+    letter-spacing: 0px;
+  }
 
   &.dark {
     background-color: $dark-primary;
 
     .title-contact {
-      font: normal normal bold 18px/26px Circe;
-      letter-spacing: 0px;
       color: $subtitle !important;
-      opacity: 1;
-      text-align: center;
-      border-bottom: 1px solid grey;
-      padding-bottom: 5px;
+      border-bottom: 1px solid $dark-border-bottom;
     }
 
     p {
-      font: normal normal 300 16px/33px Circe;
-      letter-spacing: 0px;
       color: #ffffff;
-    }
-
-    hr {
-      color: $subtitle;
     }
   }
 
@@ -111,29 +104,25 @@ export default {
     background-color: $light;
 
     .title-contact {
-      font: normal normal bold 18px/26px Circe;
-      letter-spacing: 0px;
       color: $dark-secondary !important;
-      opacity: 1;
-      text-align: center;
       border-bottom: 1px solid grey;
-      padding-bottom: 5px;
     }
 
     p {
-      font: normal normal 300 16px/33px Circe;
-      letter-spacing: 0px;
       color: $dark-secondary;
-    }
-
-    hr {
-      color: black;
     }
   }
 }
 
 .logo-position {
-  justify-content: center;
+  justify-content: space-evenly;
+  position: relative;
+  img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 10px;
+  }
 }
 
 p {

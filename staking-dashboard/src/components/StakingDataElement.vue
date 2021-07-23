@@ -42,8 +42,7 @@ export default {
 @import "@/assets/scss/variables";
 
 .container-staked {
-
-  &.dark{
+  &.dark {
     background: $dark-tertiary 0% 0% no-repeat padding-box;
     border-radius: 10px;
     padding: 20px;
@@ -51,48 +50,46 @@ export default {
     flex-direction: column;
 
     .price-side {
-  text-align: center;
-  font: normal normal bold 16px/23px Circe;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-  border-right: 1px solid;
-}
+      text-align: center;
+      font: normal normal bold 16px/23px Circe;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      border-right: 1px solid;
+    }
 
-.name-side {
-  text-align: center;
-  font: normal normal 300 18px/26px Circe;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-}
+    .name-side {
+      text-align: center;
+      font: normal normal 300 18px/26px Circe;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+    }
   }
 
-  &.light{
+  &.light {
     background: $light-secondary 0% 0% no-repeat padding-box;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
 
-     .price-side {
-  text-align: center;
-  font: normal normal bold 16px/23px Circe;
-  letter-spacing: 0px;
-  color: $dark-tertiary;
-  opacity: 1;
-  border-right: 1px solid;
-}
+    .price-side {
+      text-align: center;
+      font: normal normal bold 16px/23px Circe;
+      letter-spacing: 0px;
+      color: $dark-tertiary;
+      opacity: 1;
+      border-right: 1px solid;
+    }
 
-.name-side {
-  text-align: center;
-  font: normal normal 300 18px/26px Circe;
-  letter-spacing: 0px;
-  color: $dark-tertiary;
-  opacity: 1;
-}
+    .name-side {
+      text-align: center;
+      font: normal normal 300 18px/26px Circe;
+      letter-spacing: 0px;
+      color: $dark-tertiary;
+      opacity: 1;
+    }
   }
 }
-
-
 </style>

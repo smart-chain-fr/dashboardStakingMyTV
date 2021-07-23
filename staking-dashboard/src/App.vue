@@ -29,7 +29,7 @@ export default {
   },
 
   data: () => ({
-    address: "0x12345678901234",
+    
   }),
 };
 </script>
@@ -44,10 +44,13 @@ export default {
 
 .v-main {
   display: flex;
-  padding: 31px !important;
+  padding: 0 31px !important;
   flex-direction: row;
-  margin: 0px;
-
+//  margin: 0px;
+  height: 100%;
+  align-items: center;
+  
+ 
   &.dark {
     background: $dark-app-background;
   }

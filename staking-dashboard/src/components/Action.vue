@@ -4,26 +4,18 @@
 
     <!--  Border botton possible -->
     <br />
-    <v-row>
-      <v-col md="12">
-        <div v-if="isConnected">
-          <router-link :to="{ name: 'stake-manage' }" class="mystake mb-5" block
-            >My Stake
-          </router-link>
-        </div>
+    <v-row class="full-height">
+      <v-col md="12" class="container_button">
+        <router-link v-if="isConnected" :to="{ name: 'stake-manage' }"
+          ><v-btn class="mystake mb-5" block>Stake </v-btn>
+        </router-link>
 
-        <div v-else>
-          <v-btn class="mystake mb-5" block disabled>My Stake </v-btn>
-        </div>
+        <v-btn v-else class="mystake mb-5" block disabled>My Stake </v-btn>
 
-        <div v-if="isConnected">
-          <router-link :to="{ name: 'stake-home' }" class="stake" block>
-            Stake
-          </router-link>
-        </div>
-        <div v-else>
-          <v-btn class="stake mb-5" block disabled>Stake </v-btn>
-        </div>
+        <router-link v-if="isConnected" :to="{ name: 'stake-home' }">
+          <v-btn class="stake mb-5" block>My Stake </v-btn>
+        </router-link>
+        <v-btn v-else class="stake mb-5" block disabled>Stake </v-btn>
       </v-col>
     </v-row>
   </v-col>
@@ -51,24 +43,67 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../assets/scss/variables";
+@import "@/assets/scss/variables";
 
 .container-action {
   border-radius: 15px;
   opacity: 1;
-  margin-bottom: 17px !important;
+  margin-bottom: 10px !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .full-height {
+    height: 80% !important;
+    width: 100%;
+    margin: 0;
+  }
+
+  .container_button {
+    .mystake {
+      background: transparent linear-gradient(270deg, #56c1f0 0%, #4733c0 100%)
+        0% 0% no-repeat padding-box;
+      border-radius: 60px;
+      opacity: 1;
+      text-align: center;
+      font: normal normal bold 16px/23px Circe;
+      letter-spacing: 0px;
+      color: $light !important;
+      text-transform: uppercase;
+      display: block;
+      height: 60px;
+    }
+
+    .stake {
+      background: transparent linear-gradient(90deg, #56c1f0 0%, #4733c0 100%)
+        0% 0% no-repeat padding-box;
+      border-radius: 60px;
+      opacity: 1;
+      text-align: center;
+      font: normal normal bold 16px/23px Circe;
+      letter-spacing: 0px;
+      color: $light !important;
+      text-transform: uppercase;
+      opacity: 1;
+      display: block;
+      height: 60px;
+    }
+  }
+
+  .title-action {
+    font: normal normal bold 18px/26px Circe;
+    letter-spacing: 0px;
+    opacity: 1;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 70%;
+  }
 
   &.dark {
     background-color: $dark-primary;
-
     .title-action {
-      font: normal normal bold 18px/26px Circe;
-      letter-spacing: 0px;
       color: $subtitle !important;
-      opacity: 1;
-      text-align: center;
-      border-bottom: 1px solid grey;
-      padding-bottom: 5px;
+      border-bottom: 1px solid $dark-border-bottom;
     }
   }
 
@@ -76,13 +111,8 @@ export default {
     background-color: white;
 
     .title-action {
-      font: normal normal bold 18px/26px Circe;
-      letter-spacing: 0px;
       color: $dark-secondary !important;
-      opacity: 1;
-      text-align: center;
       border-bottom: 1px solid grey;
-      padding-bottom: 5px;
     }
   }
 }
@@ -103,33 +133,5 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.mystake {
-  background: transparent linear-gradient(270deg, #56c1f0 0%, #4733c0 100%) 0%
-    0% no-repeat padding-box;
-  border-radius: 60px;
-  opacity: 1;
-  text-align: center;
-  font: normal normal bold 16px/23px Circe;
-  letter-spacing: 0px;
-  color: $light !important;
-  text-transform: uppercase;
-  display: block;
-  position: relative;
-}
-
-.stake {
-  background: transparent linear-gradient(90deg, #56c1f0 0%, #4733c0 100%) 0% 0%
-    no-repeat padding-box;
-  border-radius: 60px;
-  opacity: 1;
-  text-align: center;
-  font: normal normal bold 16px/23px Circe;
-  letter-spacing: 0px;
-  color: $light !important;
-  text-transform: uppercase;
-  opacity: 1;
-  display: block;
 }
 </style>

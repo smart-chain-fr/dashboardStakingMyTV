@@ -1,24 +1,47 @@
-
 <template>
-  <v-col md="12" class="container-faq" :class="classObject">
-    <!-- Prends la place restante sur la row -->
-    <v-row class="faq_icon">
-      <img src="@/assets/faq.svg" alt="Question"
-    /></v-row>
+  <section v-if="true">
+    <v-col md="12" class="container-faq" :class="classObject">
+      <!-- Prends la place restante sur la row -->
+      <v-row class="faq_icon">
+        <img src="@/assets/faq.svg" alt="Question"
+      /></v-row>
 
-    <h2 class="title-faq">Faq</h2>
+      <h2 class="title-faq">FAQ</h2>
 
-    <v-row cols="12">
-      <v-col>
-        <p class="mr-5 ml-5">
-          Have a question ? We can help you find your answers here
-        </p>
-      </v-col>
+      <v-row cols="12">
+        <v-col>
+          <span class="mr-5 ml-5">
+            Have a question ? We can help you find your answers here
+          </span>
+
+          <div class="arrow">
+            <router-link :to="{ name: 'stake-manage' }">
+              <img src="@/assets/arrow.svg" alt="Go to FAQ" />
+            </router-link>
+          </div>
+        </v-col>
+      </v-row>
+    </v-col>
+  </section>
+
+  <section v-else>
+    <v-row>
+      <img src="@/assets/faq.svg" alt="Question" />
     </v-row>
-  </v-col>
+
+    <v-row class="burger-menu-text"> FAQ </v-row>
+
+    <v-row> Have a question ? We can help you find your answers here </v-row>
+
+    <v-row>
+      <div class="logo-mobile">
+        <router-link :to="{ name: 'stake-manage' }">
+          <img src="@/assets/arrow.svg" alt="Go to FAQ" />
+        </router-link>
+      </div>
+    </v-row>
+  </section>
 </template>
-
-
 <script>
 import { mapGetters } from "vuex";
 
@@ -31,7 +54,7 @@ export default {
     asset: [{ faq: "@/assets/faq.svg" }],
   }),
   computed: {
-    ...mapGetters(["theme"]),
+    ...mapGetters(["theme", "width", "height"]),
     classObject() {
       return {
         dark: this.theme === "dark",
@@ -44,7 +67,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../assets/scss/variables";
+@import "@/assets/scss/variables";
 
 .container-faq {
   /* display: auto; */
@@ -53,50 +76,54 @@ export default {
   opacity: 1;
   padding: 20px !important;
   margin-top: -10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 25px;
+
+  .logo-position {
+    justify-content: center;
+  }
+
+  .title-faq {
+    font: normal normal bold 18px/26px Circe;
+    letter-spacing: 0px;
+    opacity: 1;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 70%;
+  }
+
+  span {
+    font: normal normal 300 16px/33px Circe;
+    letter-spacing: 0px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+  }
 
   &.dark {
     background-color: $dark-primary;
 
-    p {
-      font: normal normal 300 16px/33px Circe;
-      letter-spacing: 0px;
+    span {
       color: #ffffff;
-      opacity: 1;
-      display: flex;
-      justify-content: center;
     }
-
     .title-faq {
-      font: normal normal bold 18px/26px Circe;
-      letter-spacing: 0px;
+      border-bottom: 1px solid $dark-border-bottom;
       color: $subtitle !important;
-      opacity: 1;
-      text-align: center;
-      border-bottom: 1px solid grey;
-      padding-bottom: 5px;
     }
   }
 
   &.light {
     background-color: $light;
 
-    p {
-      font: normal normal 300 16px/33px Circe;
-      letter-spacing: 0px;
+    span {
       color: black;
-      opacity: 1;
-      display: flex;
-      justify-content: center;
     }
 
     .title-faq {
-      font: normal normal bold 18px/26px Circe;
-      letter-spacing: 0px;
       color: $dark-secondary !important;
-      opacity: 1;
-      text-align: center;
       border-bottom: 1px solid grey;
-      padding-bottom: 5px;
     }
   }
 }
@@ -107,15 +134,24 @@ export default {
   margin-bottom: 5px;
 }
 
-hr {
-  color: #badeff;
-}
-
-.logo-position {
-  justify-content: center;
-}
-
 p {
   margin-left: 10px;
 }
+
+.arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+// .burger-menu-text {
+//   text-align: left;
+//   font: normal normal bold 18px/26px Circe;
+//   letter-spacing: 0px;
+//   color: $subtitle;
+// }
+
+// .logo-mobile{
+//   margin-left: 10%;
+// }
 </style>
