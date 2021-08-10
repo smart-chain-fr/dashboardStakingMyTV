@@ -79,7 +79,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-right: 25px;
+  margin-right: 120px;
 
   .logo-position {
     justify-content: center;
